@@ -13,7 +13,7 @@ object Server:
     // We can define a multilingual string for our languages
     // Providing more languages than required is not a problem, but omitting one is a compile error
     // If we included the same language *twice* in the same `Messages`, it would also be a compile error
-    val title: Messages[AudienceLang] = en"Welcome!" & fr"Bienvenue!" & de"Willkommen!" & es"Bienvenidas!"
+    val title: I18n[String, AudienceLang] = en"Welcome!" & fr"Bienvenue!" & de"Willkommen!" & es"Bienvenidas!"
 
 
     // We can get a message in a specific language by applying that language as a type parameter

@@ -10,12 +10,12 @@ var dynamicLang = "es"
 
 @main
 def run(lang: String): Unit =
-   def number(n: Int): Messages[MyLangs] = n match
+   def number(n: Int): I18n[String, MyLangs] = n match
       case 1 => en"one" & fr"un" & de"ein" & es"uno"
       case 2 => en"two" & fr"deux" & de"zwei" & es"dos"
       case 3 => en"three" & fr"trois" & de"drei" & es"tres"
 
-   val msg: Messages[SubsetLangs] =
+   val msg: I18n[String, SubsetLangs] =
       en"This is the number ${number(1)} in English" &
       de"Das ist die Nummer ${number(1)} auf Deutsch" &
       es"Es el numero ${number(1)} en español" &
